@@ -10,6 +10,7 @@ const Navbar = () => (
     direction="row"
     alignItems="center"
     p={2}
+    zIndex={10}
     sx={{
       position: "sticky",
       background: "#000",

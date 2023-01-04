@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 
 import {
   Feed,
@@ -12,6 +12,7 @@ import {
 
 const App = () => (
   <BrowserRouter>
+    <CssBaseline />
     <Box sx={{ backgroundColor: "#000" }}>
       <Navbar />
       <Routes>

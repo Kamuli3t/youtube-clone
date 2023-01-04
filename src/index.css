@@ -4,6 +4,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 a {
   text-decoration: none;
@@ -32,11 +35,6 @@ a {
 
 .category-btn:hover span {
   color: white !important;
-}
-
-.react-player {
-  height: 77vh !important;
-  width: 100% !important;
 }
 
 .search-bar {

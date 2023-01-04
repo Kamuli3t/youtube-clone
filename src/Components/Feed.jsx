@@ -1,7 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { SideBar, Videos } from "./";
+import { SideBar } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
+import VideoGrid from "./VideoGrid";
 
 const Feed = () => {
   const [categorySelected, setCategorySelected] = useState("New");
@@ -12,6 +13,7 @@ const Feed = () => {
       setVideos(data.items);
     });
   }, [categorySelected]);
+
   return (
     <Stack
       sx={{
@@ -21,9 +23,10 @@ const Feed = () => {
     >
       <Box
         sx={{
-          height: { sm: "auto", md: "95vh" },
+          height: { sm: "auto", md: "90vh" },
           borderRight: "1px solid #3d3d3d",
           px: { sm: 0, md: 2 },
+          width: { xs: "100vw", md: "auto" },
         }}
       >
         <SideBar
@@ -31,6 +34,7 @@ const Feed = () => {
           setCategorySelected={setCategorySelected}
         />
         <Typography
+          justifyContent="center"
           className="copyright"
           variant="body2"
           sx={{ tm: 1.5, color: "#fff" }}
@@ -38,25 +42,8 @@ const Feed = () => {
           Copyright @ 2022
         </Typography>
       </Box>
-      <Box
-        sx={{
-          flex: 2,
-          height: "90vh",
-          px: 2,
-        }}
-      >
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          mb={2}
-          sx={{ color: "white" }}
-        >
-          {`${categorySelected}`}{" "}
-          <span style={{ color: "#fc1503" }}>Videos</span>
-        </Typography>
 
-        <Videos videos={videos} setVideos={setVideos} />
-      </Box>
+      <VideoGrid categorySelected={categorySelected} videos={videos} />
     </Stack>
   );
 };
