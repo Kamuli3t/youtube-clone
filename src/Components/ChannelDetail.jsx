@@ -36,6 +36,7 @@ const ChannelDetail = () => {
         <ChannelCard channelDetail={channelDetail} marginTop="-150px" />
       </Box>
       <Box
+        id="videosss"
         display="flex"
         width="100%"
         justifyContent="center"
