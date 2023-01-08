@@ -44,7 +44,7 @@ const SearchBar = () => {
         // label="Search..."
         type="search"
         variant="standard"
-        ref={enteredSearchRef}
+        inputRef={enteredSearchRef}
         sx={{ mt: "3px" }}
       />
       <IconButton type="submit" sx={{ color: "red", p: "10px" }}>
