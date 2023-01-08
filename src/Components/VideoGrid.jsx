@@ -6,6 +6,7 @@ const VideoGrid = ({
   categorySelected = "Search results for",
   videos,
   searchTerm = null,
+  mode,
 }) => {
   return (
     <Box
@@ -16,14 +17,19 @@ const VideoGrid = ({
         height: "90vh",
       }}
     >
-      <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        mb={2}
+        sx={{ color: "text.primary" }}
+      >
         {categorySelected}{" "}
         <span style={{ color: "#FC1503" }}>
           {searchTerm ? `${searchTerm}` : "videos"}
         </span>
       </Typography>
 
-      <Videos videos={videos} />
+      <Videos videos={videos} mode={mode} />
     </Box>
   );
 };

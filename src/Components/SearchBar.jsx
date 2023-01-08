@@ -1,5 +1,5 @@
 import { Search } from "@mui/icons-material";
-import { IconButton, Paper } from "@mui/material";
+import { IconButton, Paper, TextField } from "@mui/material";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -15,21 +15,37 @@ const SearchBar = () => {
       navigate(`/search/${searchTerm}`);
     }
   };
+
+  // const mode = theme.palette.mode;
+  // console.log(mode);
+
   return (
     <Paper
       component="form"
       onSubmit={onSubmitHandler}
       sx={{
-        border: "1px solid #e3e3e3",
+        // border: "1px solid #e3e3e3",
+
         borderRadius: 20,
         pl: 2,
         mr: { sm: 5 },
+        alignItems: "center",
       }}
     >
-      <input
+      {/* <input
         ref={enteredSearchRef}
-        className="search-bar"
+        className={`${
+          mode === "light" ? "light-search" : "dark-search"
+        } "search-bar"`}
         placeholder="Search..."
+      /> */}
+
+      <TextField
+        // label="Search..."
+        type="search"
+        variant="standard"
+        ref={enteredSearchRef}
+        sx={{ mt: "3px" }}
       />
       <IconButton type="submit" sx={{ color: "red", p: "10px" }}>
         <Search />

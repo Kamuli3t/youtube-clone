@@ -4,7 +4,7 @@ import { SideBar } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import VideoGrid from "./VideoGrid";
 
-const Feed = () => {
+const Feed = ({ mode }) => {
   const [categorySelected, setCategorySelected] = useState("New");
   const [videos, setVideos] = useState([]);
 
@@ -37,13 +37,17 @@ const Feed = () => {
           justifyContent="center"
           className="copyright"
           variant="body2"
-          sx={{ tm: 1.5, color: "#fff" }}
+          sx={{ tm: 1.5, color: "text.primary" }}
         >
           Copyright @ 2022
         </Typography>
       </Box>
 
-      <VideoGrid categorySelected={categorySelected} videos={videos} />
+      <VideoGrid
+        categorySelected={categorySelected}
+        videos={videos}
+        mode={mode}
+      />
     </Stack>
   );
 };

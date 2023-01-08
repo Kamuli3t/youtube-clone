@@ -1,5 +1,5 @@
 import { categories } from "../utils/constants";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 const SideBar = ({ categorySelected, setCategorySelected }) => (
   <Stack
@@ -31,11 +31,16 @@ const SideBar = ({ categorySelected, setCategorySelected }) => (
         >
           {category.icon}
         </span>
-        <span
-          style={{ opacity: category.name === categorySelected ? "1" : "0.7" }}
+        <Typography
+          variant="body1"
+          sx={{
+            color: "text.primary",
+            fontWeight: "bold",
+            opacity: category.name === categorySelected ? "1" : "0.7",
+          }}
         >
           {category.name}
-        </span>
+        </Typography>
       </button>
     ))}
   </Stack>
