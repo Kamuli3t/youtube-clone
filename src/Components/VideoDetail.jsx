@@ -7,7 +7,7 @@ import { CheckCircle } from "@mui/icons-material";
 import nFormatter from "../utils/nFormatter";
 import Videos from "./Videos";
 
-const VideoDetail = () => {
+const VideoDetail = ({ mode }) => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState([]);
   const [videos, setVideos] = useState([]);
@@ -40,13 +40,18 @@ const VideoDetail = () => {
               height="70vh"
               controls
             />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <Typography
+              color="text.primary"
+              variant="h5"
+              fontWeight="bold"
+              p={2}
+            >
               {title}
             </Typography>
             <Stack
               direction="row"
               justifyContent="space-between"
-              color="#fff"
+              color="text.secondary"
               py={1}
               px={2}
             >
@@ -79,7 +84,7 @@ const VideoDetail = () => {
           px={2}
           py={{ md: 1, xs: 5 }}
         >
-          <Videos videos={videos} direction="column" />
+          <Videos videos={videos} mode={mode} direction="column" />
         </Box>
       </Stack>
     </Box>

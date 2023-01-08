@@ -26,7 +26,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
           flexDirection: "column",
           justifyContent: "center",
           textAlign: "center",
-          color: "#fff",
+          color: "text.primary",
         }}
       >
         <CardMedia
@@ -45,11 +45,13 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
         <Typography variant="h6">
           {channelDetail?.snippet?.title}{" "}
           <CheckCircleIcon
-            sx={{ fontSize: "14px", color: "gray", ml: "5px" }}
+            sx={{ fontSize: "14px", color: "text.primary", ml: "5px" }}
           />
         </Typography>
         {channelDetail?.statistics?.subscriberCount && (
-          <Typography sx={{ fontSize: "15px", fontWeight: 500, color: "gray" }}>
+          <Typography
+            sx={{ fontSize: "15px", fontWeight: 500, color: "text.secondary" }}
+          >
             {nFormatter(
               parseInt(channelDetail?.statistics?.subscriberCount),
               1

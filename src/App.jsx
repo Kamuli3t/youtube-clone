@@ -31,9 +31,21 @@ const App = () => {
           <Navbar toggleColorMode={toggleColorMode} />
           <Routes>
             <Route path="/" exact element={<Feed mode={mode} />} />
-            <Route path="/video/:id" exact element={<VideoDetail />} />
-            <Route path="/channel/:id" exact element={<ChannelDetail />} />
-            <Route path="/search/:searchTerm" exact element={<SearchFeed />} />
+            <Route
+              path="/video/:id"
+              exact
+              element={<VideoDetail mode={mode} />}
+            />
+            <Route
+              path="/channel/:id"
+              exact
+              element={<ChannelDetail mode={mode} />}
+            />
+            <Route
+              path="/search/:searchTerm"
+              exact
+              element={<SearchFeed mode={mode} />}
+            />
           </Routes>
         </Box>
       </BrowserRouter>

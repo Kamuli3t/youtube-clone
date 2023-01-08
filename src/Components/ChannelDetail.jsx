@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
-const ChannelDetail = () => {
+const ChannelDetail = ({ mode }) => {
   const { id } = useParams();
   const [channelDetail, setChannelDetail] = useState(null);
   const [videosData, setVideosData] = useState([]);
@@ -43,7 +43,7 @@ const ChannelDetail = () => {
         alignItems="center"
         p="2"
       >
-        <Videos videos={videosData} />
+        <Videos videos={videosData} mode={mode} />
       </Box>
     </Box>
   );
