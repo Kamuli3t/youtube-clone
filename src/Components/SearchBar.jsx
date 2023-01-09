@@ -23,6 +23,7 @@ const SearchBar = () => {
     <Paper
       component="form"
       onSubmit={onSubmitHandler}
+      elevation="3"
       sx={{
         // border: "1px solid #e3e3e3",
 
@@ -45,7 +46,7 @@ const SearchBar = () => {
         type="search"
         variant="standard"
         inputRef={enteredSearchRef}
-        sx={{ mt: "3px" }}
+        sx={{ mt: "3px", width: { xs: 150, sm: 250 } }}
       />
       <IconButton type="submit" sx={{ color: "red", p: "10px" }}>
         <Search />

@@ -23,6 +23,7 @@ const VideoCard = ({
           sx={{
             width: { md: "320px", xs: "380px" },
             height: 180,
+            mt: "2px",
           }}
         />
       </Link>
@@ -37,6 +38,7 @@ const VideoCard = ({
             color="text.primary"
             variant="subtitle1"
             fontWeight="bold"
+            sx={{ lineHeight: 1 }}
           >
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
           </Typography>
@@ -51,7 +53,12 @@ const VideoCard = ({
           <Typography color="text.secondary" variant="subtitle2">
             {snippet?.channelTitle}
             <CheckCircleIcon
-              sx={{ fontSize: "12px", color: "text.secondary", ml: "5px" }}
+              sx={{
+                fontSize: "12px",
+                color: "text.secondary",
+                ml: "5px",
+                mt: "10px",
+              }}
             />
           </Typography>
         </Link>

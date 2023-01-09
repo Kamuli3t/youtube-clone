@@ -59,6 +59,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
             Subscribers
           </Typography>
         )}
+        <Typography variant="body1">Channel</Typography>
       </CardContent>
     </Link>
   </Box>

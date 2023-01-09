@@ -33,14 +33,16 @@ const Feed = ({ mode }) => {
           categorySelected={categorySelected}
           setCategorySelected={setCategorySelected}
         />
-        <Typography
-          justifyContent="center"
-          className="copyright"
-          variant="body2"
-          sx={{ tm: 1.5, color: "text.primary" }}
-        >
-          Copyright @ 2022
-        </Typography>
+        {window.innerWidth > "900" && (
+          <Typography
+            justifyContent="center"
+            className="copyright"
+            variant="body2"
+            sx={{ tm: 1.5, color: "text.primary" }}
+          >
+            Copyright @ 2022
+          </Typography>
+        )}
       </Box>
 
       <VideoGrid
