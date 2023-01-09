@@ -48,6 +48,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
             sx={{ fontSize: "14px", color: "text.primary", ml: "5px" }}
           />
         </Typography>
+
         {channelDetail?.statistics?.subscriberCount && (
           <Typography
             sx={{ fontSize: "15px", fontWeight: 500, color: "text.secondary" }}
