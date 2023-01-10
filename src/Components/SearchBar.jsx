@@ -23,7 +23,7 @@ const SearchBar = () => {
     <Paper
       component="form"
       onSubmit={onSubmitHandler}
-      elevation="3"
+      elevation={3}
       sx={{
         // border: "1px solid #e3e3e3",
 
